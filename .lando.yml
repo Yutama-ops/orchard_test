@@ -1,0 +1,4 @@
+name: orchard-test
+recipe: wordpress
+config:
+  webroot: web
