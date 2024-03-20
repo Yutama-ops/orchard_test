@@ -17,7 +17,7 @@ get_header();
 				$image_3 = get_field('image_3');
 				
 			?>
-			<section class="main-content my-9">
+			<section class="main-content my-md-2 my-lg-9">
 				<div class="container">
 					<div class="row g-3 mb-4 d-flex align-items-stretch">
 						<div class="col-6 col-lg-4 d-flex">
@@ -41,31 +41,33 @@ get_header();
 
 		
 
-			<section class="main-content my-9">
+			<section class="main-content my-md-2 my-lg-9">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<h1 class="text-center py-5"><?php echo get_the_title(); ?></h1>
+							<h1 class="text-center pb-4 py-lg-5"><?php echo get_the_title(); ?></h1>
 						</div>
 					</div>
-					<div class="row g-3 mb-4 d-flex">
+					<div class="row g-3 mb-4 d-flex post-container">
 						<?php
 						// Define our WP Query Parameters
 						$the_query = new WP_Query( 'posts_per_page=3' );
 						
 						// Start our WP Query
 						while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-						<article class="col-12 col-md-6 col-lg-4">
+						<a href="#" aria-label="Read more about <?php the_title_attribute(); ?>" class="col-12 col-md-6 col-lg-4 post-container">
+						<article class="post-entry">
 							<?php if ( has_post_thumbnail() ) : ?>
 								<?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
-									<a href="<?php the_permalink(); ?>">
-										<img src="<?php echo $featured_img_url; ?>" class="w-100 border-danger border-bottom border-5" alt="<?php the_title_attribute(); ?>"/>
-									</a>
+									
+										<img src="<?php echo $featured_img_url; ?>" class="w-100 border-danger border-bottom border-5 mb-3" alt="<?php the_title_attribute(); ?>"/>
+									
 							<?php endif; ?>
-							<a href="<?php the_permalink(); ?>"><h3 class="fw-bold"><?php the_title(); ?></h3></a>
+							<h5 class="fw-bold"><?php the_title(); ?></h5>
 							<p><?php the_excerpt(); ?></p>
-							<a href="<?php the_permalink(); ?>" aria-label="Read more about <?php the_title_attribute(); ?>" class="read-more fw-bold border-danger border-bottom border-2 pb-1">Read More</a>
+							<p class="read-more d-inline-block fw-bold border-danger border-bottom border-2 pb-1">Read More</p>
 						</article>
+						</a>
 						<?php endwhile; wp_reset_postdata(); ?>
 					</div>
 				</div>	

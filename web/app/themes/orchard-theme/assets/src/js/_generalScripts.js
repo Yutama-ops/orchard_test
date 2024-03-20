@@ -1,14 +1,22 @@
 
 class General {
 	constructor() {
-		this.testVariable = 'script working';
 		this.init();
 	}
 
 	init() {
-		// for tests purposes only
-		console.log(this.testVariable);
+		this.bindAnchorClicks();
 	}
+	
+	bindAnchorClicks() {
+		const anchors = document.querySelectorAll('a');
+		anchors.forEach(anchor => {
+		  anchor.addEventListener('click', (e) => {
+			console.log('Anchor clicked:', e.currentTarget);
+		  });
+		});
+	  }
+	  
 }
 
 export default General;
