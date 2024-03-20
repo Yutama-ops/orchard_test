@@ -55,7 +55,7 @@ class General {
 							<div class="modal-dialog modal-dialog-centered">
 								<div class="modal-content">
 									<div class="modal-body bg-light position-relative">
-										<button type="button" class="btn-close end-0 position-absolute py-3 px-3 bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+										<button type="button" class="btn-close end-0 position-absolute py-2 px-2 bg-primary mx-2 my-1" data-bs-dismiss="modal" aria-label="Close"></button>
 										<img src="${imgElement.src}" class="img-fluid w-100 align-self-stretch" alt="${imgElement.alt}">
 									</div>
 								</div>
