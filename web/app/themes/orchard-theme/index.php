@@ -27,12 +27,16 @@ get_header();
 							<img src="<?php echo $image_2; ?>" class="img-fluid mb-2" alt="Food Image">
 							<img src="<?php echo $image_3; ?>" class="img-fluid" alt="Asparagus Image">
 						</div>
+						
+
 						<div class="col-12 col-lg-4 d-flex flex-column pt-1">
-							<div class="mb-2">
+							<div class="mb-2 text-container">
 								<h2 class="fw-light text-uppercase border-bottom border-secondary pb-1 mb-2"><?php echo $title; ?></h2>
+								<div class="content-overflow">
 								<?php if(isset($content)) {
 									echo $content; 
 								}?>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -41,7 +45,7 @@ get_header();
 
 		
 
-			<section class="main-content my-md-2 my-lg-9">
+			<section class="latest-post my-md-2 my-lg-9">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -65,7 +69,7 @@ get_header();
 							<?php endif; ?>
 							<h5 class="fw-bold"><?php the_title(); ?></h5>
 							<p><?php the_excerpt(); ?></p>
-							<p class="read-more d-inline-block fw-bold border-danger border-bottom border-2 pb-1">Read More</p>
+							<p class="read-more text-primary d-inline-block fw-bold border-danger border-bottom border-2 pb-1">Read More</p>
 						</article>
 						</a>
 						<?php endwhile; wp_reset_postdata(); ?>
