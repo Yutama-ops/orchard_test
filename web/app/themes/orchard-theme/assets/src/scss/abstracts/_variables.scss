@@ -28,6 +28,7 @@ $grid-columns:12;
 $grid-gutter-width:3rem;
 $body-color:black;
 
+
 $grid-breakpoints: (
     xs: 0,
     sm: 576px,
@@ -62,4 +63,5 @@ $spacers : (
 $theme-colors: (
     "primary": #ffffff, 
     "danger": #cf1430, 
+    "light":      #f2f2f2
 );

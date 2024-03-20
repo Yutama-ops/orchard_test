@@ -5,26 +5,16 @@
 // vendors
 @import "node_modules/bootstrap/scss/bootstrap";
 
-// vendors overrides
-// @import "vendors/myvendor";
-
 // base
 @import "base/fonts",
         "base/base";
 
 // layout
-@import "layout/header",
-        "layout/footer",
-        "layout/forms",
-        "layout/grid",
-        "layout/posts";
+@import "layout/posts";
 
 // components
-@import "components/buttons",
-        "components/modal",
-        "components/text-container";
+@import "components/text-container";
 
 
 // pages
-@import "pages/front-page",
-        "pages/page";
+@import "pages/front-page";

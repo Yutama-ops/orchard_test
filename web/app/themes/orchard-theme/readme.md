@@ -30,3 +30,5 @@ Launch your watch for assets with :
 For production sites, create your build with :
 
 	npm run build
+
+run a live server on index.html for a static site and it would work just like the index.php

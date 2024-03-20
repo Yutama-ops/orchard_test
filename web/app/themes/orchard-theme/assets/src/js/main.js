@@ -1,3 +1,4 @@
+import 'bootstrap';
 import General from './_generalScripts';
 
 const App = {
