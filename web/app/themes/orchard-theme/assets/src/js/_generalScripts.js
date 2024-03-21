@@ -88,7 +88,6 @@ class General {
 								</div>
 							</div>
 						`;
-
 					});
 
 					latestPosts.forEach((post) => {
