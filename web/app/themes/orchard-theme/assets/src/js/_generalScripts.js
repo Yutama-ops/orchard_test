@@ -59,11 +59,11 @@ class General {
 
 					mainContentSection.innerHTML += `
 						<div>
-							<h2 class="fw-light text-uppercase border-bottom border-secondary main-title">${mainContent.title}</h2>
+							<h3 class="fw-light text-uppercase border-bottom border-secondary main-title">${mainContent.title}</h3>
 							<div class="content-overflow">
 							<p class="main-content-paragraph main-content">${mainContent.content}</p>
 							<h6 class="text-danger sub-title">${mainContent.subTitle}</h6>
-							<p class="fw-bold text-primary sub-content mb-0">${mainContent.subContent}</p>
+							<h5 class="fw-bold text-primary sub-content mb-0">${mainContent.subContent}</h5>
 						</div>
 						`;
 
@@ -84,7 +84,7 @@ class General {
 							<div class="modal-dialog modal-dialog-centered">
 								<div class="modal-content">
 									<div class="modal-body bg-light position-relative">
-										<button type="button" class="btn-close end-0 position-absolute py-2 px-2 bg-primary mx-2 my-1" data-bs-dismiss="modal" aria-label="Close"></button>
+										<button type="button" class="btn-close end-0 position-absolute py-1 px-1 bg-primary mx-2 my-1" data-bs-dismiss="modal" aria-label="Close"></button>
 										<img src="${imgElement.src}" class="img-fluid w-100 align-self-stretch" alt="${imgElement.alt}">
 									</div>
 								</div>
@@ -102,7 +102,7 @@ class General {
 										<img src="${post.image.src}" onerror="this.src='/web/app/themes/orchard-theme/assets/src/img/orchard_logo.jpeg';" class="w-100 border-danger border-bottom border-5 mb-3" alt="${post.image.alt}">
 										<h5 class="fw-bold">${post.title}</h5>
 										<p>${post.content}</p>
-										<p class="read-more text-primary d-inline-block fw-bold border-danger border-bottom border-2 pb-1">Read More</p>
+										<h5 class="read-more text-primary d-inline-block fw-bold border-danger border-bottom border-2">Read More</h5>
 									</article>
 								</a>
 							</div>

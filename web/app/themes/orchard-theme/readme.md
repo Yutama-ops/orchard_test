@@ -17,7 +17,7 @@
 
 ## Usage
 
-First, clone this repository in your WordPress themes directory.
+First, clone this repository in your directory.
 
 Then, run the following commands in the theme's directory :
 
@@ -31,4 +31,5 @@ For production sites, create your build with :
 
 	npm run build
 
-run a live server on index.html for a static site and it would work just like the index.php
+Then run a live server on index.html
+
