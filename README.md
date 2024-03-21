@@ -1,10 +1,3 @@
-# If you started from this root folder please go to 
-```bash
-cd /web/app/themes/orchard-theme/
-```
-And do the installation from there / follow readme file
-
-
 <p align="center">
   <a href="https://roots.io/bedrock/">
     <img alt="Bedrock" src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="100">
