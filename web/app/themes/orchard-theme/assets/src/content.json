@@ -6,16 +6,19 @@
           {
             "id": "1",
             "src": "/web/app/themes/orchard-theme/assets/src/img/component-1/Image-01.jpg",
+            "srcMobile": "/web/app/themes/orchard-theme/assets/src/img/component-1/Image-01-mobile.jpg",
             "alt": "Nature Image"
           },
           {
             "id": "2",
             "src": "/web/app/themes/orchard-theme/assets/src/img/component-1/Image-02.jpg",
+            "srcMobile": "/web/app/themes/orchard-theme/assets/src/img/component-1/Image-02-mobile.jpg",
             "alt": "Food Image"
           },
           {
             "id": "3",
             "src": "/web/app/themes/orchard-theme/assets/src/img/component-1/Image-03.jpg",
+            "srcMobile": "/web/app/themes/orchard-theme/assets/src/img/component-1/Image-03-mobile.jpg",
             "alt": "Asparagus Image"
           }
         ],

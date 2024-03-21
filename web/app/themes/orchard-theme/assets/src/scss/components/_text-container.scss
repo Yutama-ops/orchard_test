@@ -3,15 +3,16 @@
         overflow-y: auto;
         scrollbar-color: #888 #f1f1f1; // firefox scrollbar
         scrollbar-width: thin; // firefox scrollbar
-        @include media-breakpoint-up(xxl) { 
-            max-height: 550px;
-         }
-         @include media-breakpoint-up(xl) { 
-            max-height: 455px;
-         }
+       
          @include media-breakpoint-up(lg) { 
             max-height: 310px;
          }
+         @include media-breakpoint-up(xl) { 
+          max-height: 350px;
+       }
+         @include media-breakpoint-up(xxl) { 
+          max-height: 480px;
+       }
 
          // webkit for chrome and safari
          &::-webkit-scrollbar {

@@ -9,6 +9,7 @@ class General {
 	}
 
 	bindAnchorClicks() {
+		// console.log anchor interaction
 		document.body.addEventListener('click', (e) => {
 			const anchor = e.target.closest('a');
 			if (anchor) {
@@ -18,6 +19,7 @@ class General {
 	}
 
 	renderPosts() {
+		// rendering content using this so the data can be changed with ease fromt the json
 		if (document.getElementById('static')) {
 			fetch('../orchard-theme/assets/src/content.json')
 				.then((response) => response.json())
@@ -26,19 +28,46 @@ class General {
 					const modalSection = document.querySelector('.section-modal');
 					const latestPosts = data.sections.find((section) => section.id === 'latest-post').posts;
 					const mainContentImages = data.sections.find((section) => section.id === 'main-content').images;
-					const imageElements = document.querySelectorAll('#main-content .container .row .d-flex img');
+					const imageElements = document.querySelectorAll('#main-content .container .row .d-none img');
 					const mainContent = data.sections.find((section) => section.id === 'main-content');
 					const mainContentSection = document.querySelector('#main-content-text');
+					const imgCarouselSection = document.querySelector('.carousel-mobile');
+
+				
+
+					  imgCarouselSection.innerHTML += `
+					  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+						<div class="carousel-item active">
+						<img src="${mainContentImages[0].srcMobile}" class="d-block w-100" alt="${mainContentImages[0].alt}" data-bs-toggle="modal" data-bs-target="#modal-${mainContentImages[0].id}">
+					  	</div>
+						  <div class="carousel-item">
+						  <img src="${mainContentImages[1].srcMobile}" class="d-block w-100 pb-2" alt="${mainContentImages[1].alt}" data-bs-toggle="modal" data-bs-target="#modal-${mainContentImages[1].id}">
+						  <img src="${mainContentImages[2].srcMobile}" class="d-block w-100" alt="${mainContentImages[2].alt}" data-bs-toggle="modal" data-bs-target="#modal-${mainContentImages[2].id}">
+						  
+						</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						  <span class="visually-hidden">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+						  <span class="visually-hidden">Next</span>
+						</button>
+					  </div>`;
 
 					mainContentSection.innerHTML += `
 						<div>
-							<h2 class="fw-light text-uppercase border-bottom border-secondary pb-1 mb-2 main-title">${mainContent.title}</h2>
+							<h2 class="fw-light text-uppercase border-bottom border-secondary main-title">${mainContent.title}</h2>
 							<div class="content-overflow">
-							<p class="pb-2 main-content-paragraph main-content">${mainContent.content}</p>
-							<h6 class="pb-2 text-danger sub-title">${mainContent.subTitle}</h6>
-							<p class="fw-bold pb-2 text-primary sub-content">${mainContent.subContent}</p>
+							<p class="main-content-paragraph main-content">${mainContent.content}</p>
+							<h6 class="text-danger sub-title">${mainContent.subTitle}</h6>
+							<p class="fw-bold text-primary sub-content mb-0">${mainContent.subContent}</p>
 						</div>
 						`;
+
+						
 
 					imageElements.forEach((imgElement, index) => {
 						const imageSource = mainContentImages[index] ? mainContentImages[index].src : '/web/app/themes/orchard-theme/assets/src/img/orchard_logo.jpeg';

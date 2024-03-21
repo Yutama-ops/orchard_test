@@ -4,6 +4,30 @@ html, body {
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
+    background-color: black;
+    color: white;
+    font-family: 'OpenSans', sans-serif;
+
+    h2 {
+        font-size: 1.445rem;
+        padding-bottom: 10px;
+        margin-bottom: 1.5556rem; 
+    }
+
+    h5 {
+        font-size: 1.125rem;
+        font-family: 'OpenSansSemiCondensed', sans-serif;
+        font-weight: bold;
+    }
+
+    h6 {
+        font-size: 0.8889rem;
+        margin-bottom: 1.5556rem; 
+    }
+
+    p {
+        margin-bottom: 1.5556rem; 
+    }
 }
 
 a,
